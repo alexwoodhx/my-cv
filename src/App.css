@@ -1,38 +1,184 @@
+:root {
+  --transition-duration: 1s;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --light-bg: #f7f9fc;
+  --light-text: #2d3748;
+  --dark-bg: #1a202c;
+  --dark-text: #e2e8f0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.section-header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.view-more-btn {
+  background: transparent;
+  border: none;
+  color: #4299e1;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 
+    background-color 0.2s var(--transition-timing),
+    transform 0.2s var(--transition-timing),
+    color 0.2s var(--transition-timing);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.view-more-btn:hover {
+  background-color: rgba(66, 153, 225, 0.1);
+  transform: translateX(4px);
+}
+
+.dark-mode .view-more-btn {
+  color: #58a6ff;
+}
+
+.dark-mode .view-more-btn:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+}
+
+.App > main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.light-mode {
+  background-color: #f7f9fc;
+  color: #2d3748;
+  background-image: linear-gradient(to bottom right, #f7f9fc, #edf2f7);
+  transition: 
+    background-color var(--transition-duration) var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing),
+    background-image var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode {
+  background-color: #0d1117;
+  color: #e2e8f0;
+  background-image: linear-gradient(to bottom right, #0d1117, #161b22);
+  transition: 
+    background-color var(--transition-duration) var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing),
+    background-image var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .header {
+  background-color: rgba(13, 17, 23, 0.95);
+  border-bottom: 1px solid rgba(48, 54, 61, 0.6);
+  transition: 
+    background-color var(--transition-duration) var(--transition-timing),
+    border-bottom-color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .header h1 {
+  color: #58a6ff;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .header h2 {
+  color: #8b949e;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .contact-info p {
+  color: #8b949e;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .experience-item {
+  background-color: rgba(22, 27, 34, 0.7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(48, 54, 61, 0.6);
+  transition: 
+    background-color var(--transition-duration) var(--transition-timing),
+    border-color var(--transition-duration) var(--transition-timing),
+    box-shadow var(--transition-duration) var(--transition-timing),
+    transform var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .experience {
+  background-color: transparent;
+}
+
+.dark-mode .experience h2 {
+  color: #58a6ff;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .experience-item h3 {
+  color: #c9d1d9;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .experience-item li,
+.dark-mode .company {
+  color: #8b949e;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .period {
+  color: #8b949e;
+  font-style: italic;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .skills {
+  background-color: transparent;
+  transition: 
+    background-color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .skill-category {
+  background-color: rgba(22, 27, 34, 0.7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(48, 54, 61, 0.6);
+  transition: 
+    background-color var(--transition-duration) var(--transition-timing),
+    box-shadow var(--transition-duration) var(--transition-timing),
+    border-color var(--transition-duration) var(--transition-timing),
+    transform var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .skill-category h3 {
+  color: #58a6ff;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .skill-category li {
+  color: #8b949e;
+  transition: 
+    color var(--transition-duration) var(--transition-timing),
+    transform var(--transition-duration) var(--transition-timing);
+}
+
+.dark-mode .skill-category li::before {
+  color: #58a6ff;
+}
+
+main {
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0.5rem;
   }
 }

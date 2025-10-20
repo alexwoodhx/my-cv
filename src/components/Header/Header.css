@@ -1,0 +1,125 @@
+.header {
+  width: 100%;
+  padding: 3rem 2rem;
+  background-color: rgba(237, 242, 247, 0.8);
+  border-bottom: 2px solid rgba(203, 213, 224, 0.3);
+  backdrop-filter: blur(8px);
+  transition: 
+    background-color var(--transition-duration) var(--transition-timing),
+    border-bottom-color var(--transition-duration) var(--transition-timing),
+    backdrop-filter var(--transition-duration) var(--transition-timing);
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+  width: 220px;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 
+    transform 0.3s var(--transition-timing),
+    box-shadow 0.3s var(--transition-timing);
+}
+
+.profile-image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.3s var(--transition-timing);
+}
+
+.header-text {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.header h1 {
+  margin: 0;
+  color: #2b6cb0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.header h2 {
+  margin: 0.5rem 0;
+  color: #4a5568;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-info p {
+  margin: 0;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: transparent;
+  transition: 
+    color var(--transition-duration) var(--transition-timing),
+    transform 0.2s var(--transition-timing),
+    background-color 0.2s var(--transition-timing);
+}
+
+.contact-info p:hover {
+  color: #2b6cb0;
+  transform: translateY(-1px);
+  background-color: rgba(66, 153, 225, 0.1);
+}
+
+/* Dark mode styles */
+.dark-mode .profile-image-container {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(48, 54, 61, 0.6);
+}
+
+.dark-mode .profile-image-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+}

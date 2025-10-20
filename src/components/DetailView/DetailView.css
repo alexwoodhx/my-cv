@@ -1,0 +1,143 @@
+.detail-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 
+    opacity 0.3s var(--transition-timing),
+    visibility 0.3s var(--transition-timing);
+}
+
+.detail-view.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.detail-view-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  height: 100%;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 
+    opacity 0.4s var(--transition-timing) 0.2s,
+    transform 0.4s var(--transition-timing) 0.2s;
+}
+
+.personal-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.personal-detail-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .personal-detail-section {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.personal-detail-section h3 {
+  color: #2b6cb0;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgba(66, 153, 225, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.dark-mode .personal-detail-section h3 {
+  color: #58a6ff;
+  border-bottom-color: rgba(88, 166, 255, 0.2);
+}
+
+.personal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.personal-content li {
+  margin-bottom: 2rem;
+}
+
+.personal-content li:last-child {
+  margin-bottom: 0;
+}
+
+.personal-content strong {
+  display: block;
+  color: #4a5568;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.dark-mode .personal-content strong {
+  color: #c9d1d9;
+}
+
+.personal-content p {
+  color: #718096;
+  line-height: 1.6;
+  margin: 0.5rem 0 0 0;
+}
+
+.dark-mode .personal-content p {
+  color: #8b949e;
+}
+
+.detail-view.open .detail-view-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.close-button {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(66, 153, 225, 0.1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #2b6cb0;
+  transition: 
+    background-color 0.2s var(--transition-timing),
+    transform 0.2s var(--transition-timing);
+}
+
+.close-button:hover {
+  background: rgba(66, 153, 225, 0.2);
+  transform: scale(1.1);
+}
+
+/* Dark mode styles */
+.dark-mode .detail-view {
+  background-color: rgba(26, 32, 44, 0.98);
+}
+
+.dark-mode .close-button {
+  background: rgba(66, 153, 225, 0.2);
+  color: #63b3ed;
+}
+
+.dark-mode .close-button:hover {
+  background: rgba(66, 153, 225, 0.3);
+}

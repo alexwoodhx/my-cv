@@ -1,0 +1,89 @@
+.experience {
+  padding: 2rem;
+  transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+.experience h2 {
+  color: #2b6cb0;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.experience-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(203, 213, 224, 0.4);
+  position: relative;
+  transition: 
+    background-color var(--transition-duration) var(--transition-timing),
+    border-color var(--transition-duration) var(--transition-timing),
+    box-shadow var(--transition-duration) var(--transition-timing),
+    transform 0.3s var(--transition-timing);
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(45deg, #58a6ff, #4299e1);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s var(--transition-timing);
+}
+
+.experience-item:hover {
+  transform: translateX(4px) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item:hover::before {
+  opacity: 1;
+}
+
+.experience-item h3 {
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.company {
+  color: #4a5568;
+  font-weight: bold;
+  margin: 0;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.period {
+  color: #718096;
+  font-style: italic;
+  margin: 0.5rem 0;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+.experience-item ul {
+  margin: 1rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.experience-item li {
+  color: #4a5568;
+  margin-bottom: 0.8rem;
+  transition: 
+    color var(--transition-duration) var(--transition-timing),
+    transform 0.2s var(--transition-timing);
+}
