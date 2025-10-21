@@ -4,7 +4,7 @@
 }
 
 .experience h2 {
-  color: #2b6cb0;
+  color: var(--primary-purple);
   margin-bottom: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -32,7 +32,7 @@
   inset: 0;
   border-radius: 12px;
   padding: 2px;
-  background: linear-gradient(45deg, #58a6ff, #4299e1);
+  background: linear-gradient(45deg, var(--primary-purple), var(--accent-purple));
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
@@ -55,21 +55,21 @@
 }
 
 .experience-item h3 {
-  color: #2d3748;
+  color: var(--primary-purple);
   margin: 0 0 0.5rem 0;
   font-weight: 600;
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .company {
-  color: #4a5568;
+  color: var(--accent-purple);
   font-weight: bold;
   margin: 0;
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .period {
-  color: #718096;
+  color: var(--accent-dark);
   font-style: italic;
   margin: 0.5rem 0;
   transition: color var(--transition-duration) var(--transition-timing);

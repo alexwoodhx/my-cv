@@ -17,8 +17,8 @@ const Header: React.FC<HeaderProps> = ({ onViewMore }) => {
           />
         </div>
         <div className="header-text">
-          <h1>Your Name</h1>
-          <h2>Your Title / Position</h2>
+          <h1>Alex Wood</h1>
+          <h2>Software Engineer</h2>
           <div className="contact-info">
             <p>📧 alexanderdwood91@gmail.com</p>
             <p>📱 07739988534</p>

@@ -1,10 +1,18 @@
 :root {
   --transition-duration: 1s;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-  --light-bg: #f7f9fc;
-  --light-text: #2d3748;
-  --dark-bg: #1a202c;
-  --dark-text: #e2e8f0;
+  --light-bg: #f8f7fc;
+  --light-text: #2d2748;
+  --dark-bg: #1a1828;
+  --dark-text: #e8e2f0;
+  --primary-purple: #6b46c1;
+  --primary-light: #9f7aea;
+  --primary-dark: #553c9a;
+  --accent-purple: #805ad5;
+  --accent-light: #b794f4;
+  --accent-dark: #44337a;
+  --surface-light: rgba(157, 122, 234, 0.1);
+  --surface-dark: rgba(69, 51, 122, 0.2);
 }
 
 .App {
@@ -61,9 +69,9 @@
 }
 
 .light-mode {
-  background-color: #f7f9fc;
-  color: #2d3748;
-  background-image: linear-gradient(to bottom right, #f7f9fc, #edf2f7);
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  background-image: linear-gradient(to bottom right, var(--light-bg), #ede9fc);
   transition: 
     background-color var(--transition-duration) var(--transition-timing),
     color var(--transition-duration) var(--transition-timing),
@@ -71,9 +79,9 @@
 }
 
 .dark-mode {
-  background-color: #0d1117;
-  color: #e2e8f0;
-  background-image: linear-gradient(to bottom right, #0d1117, #161b22);
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  background-image: linear-gradient(to bottom right, var(--dark-bg), #241c38);
   transition: 
     background-color var(--transition-duration) var(--transition-timing),
     color var(--transition-duration) var(--transition-timing),
@@ -81,32 +89,32 @@
 }
 
 .dark-mode .header {
-  background-color: rgba(13, 17, 23, 0.95);
-  border-bottom: 1px solid rgba(48, 54, 61, 0.6);
+  background-color: rgba(26, 24, 40, 0.95);
+  border-bottom: 1px solid rgba(85, 60, 154, 0.3);
   transition: 
     background-color var(--transition-duration) var(--transition-timing),
     border-bottom-color var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .header h1 {
-  color: #58a6ff;
+  color: var(--primary-light);
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .header h2 {
-  color: #8b949e;
+  color: var(--accent-light);
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .contact-info p {
-  color: #8b949e;
+  color: var(--accent-light);
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .experience-item {
-  background-color: rgba(22, 27, 34, 0.7);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(48, 54, 61, 0.6);
+  background-color: rgba(26, 24, 40, 0.7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--primary-dark);
   transition: 
     background-color var(--transition-duration) var(--transition-timing),
     border-color var(--transition-duration) var(--transition-timing),
@@ -119,23 +127,23 @@
 }
 
 .dark-mode .experience h2 {
-  color: #58a6ff;
+  color: var(--primary-light);
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .experience-item h3 {
-  color: #c9d1d9;
+  color: var(--accent-light);
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .experience-item li,
 .dark-mode .company {
-  color: #8b949e;
+  color: var(--accent-light);
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .period {
-  color: #8b949e;
+  color: var(--accent-light);
   font-style: italic;
   transition: color var(--transition-duration) var(--transition-timing);
 }
@@ -147,9 +155,9 @@
 }
 
 .dark-mode .skill-category {
-  background-color: rgba(22, 27, 34, 0.7);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(48, 54, 61, 0.6);
+  background-color: rgba(26, 24, 40, 0.7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--primary-dark);
   transition: 
     background-color var(--transition-duration) var(--transition-timing),
     box-shadow var(--transition-duration) var(--transition-timing),
@@ -158,19 +166,19 @@
 }
 
 .dark-mode .skill-category h3 {
-  color: #58a6ff;
+  color: var(--primary-light);
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .skill-category li {
-  color: #8b949e;
+  color: var(--accent-light);
   transition: 
     color var(--transition-duration) var(--transition-timing),
     transform var(--transition-duration) var(--transition-timing);
 }
 
 .dark-mode .skill-category li::before {
-  color: #58a6ff;
+  color: var(--primary-light);
 }
 
 main {
