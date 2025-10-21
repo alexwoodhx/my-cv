@@ -1,6 +1,38 @@
 .experience {
   padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
   transition: background-color var(--transition-duration) var(--transition-timing);
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .experience-item {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-item:hover {
+    transform: translateY(-2px); /* Simpler animation on mobile */
+    transform: translateX(0);
+  }
+
+  .experience-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-item ul {
+    padding-left: 1.25rem;
+  }
+
+  .experience-item li {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
 }
 
 .experience h2 {

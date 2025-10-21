@@ -61,11 +61,21 @@
   background-color: rgba(88, 166, 255, 0.1);
 }
 
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
 .App > main {
   flex: 1;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .light-mode {
@@ -182,11 +192,31 @@
 }
 
 main {
-  padding: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
   main {
-    padding: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .App {
+    font-size: 15px; /* Slightly smaller base font for mobile */
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .view-more-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem;
+    font-size: 1rem;
   }
 }

@@ -1,5 +1,7 @@
 .skills {
   padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
   background-color: rgba(159, 122, 234, 0.05);
   backdrop-filter: blur(8px);
   transition: 
@@ -19,6 +21,34 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .skill-category {
+    padding: 1.25rem;
+  }
+
+  .skill-category:hover {
+    transform: translateY(-2px); /* Reduced hover effect on mobile */
+  }
+
+  .skill-category h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-category li {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
 }
 
 .skill-category {

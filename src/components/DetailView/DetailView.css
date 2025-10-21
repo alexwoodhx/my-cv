@@ -32,6 +32,42 @@
     transform 0.4s var(--transition-timing) 0.2s;
 }
 
+@media (max-width: 768px) {
+  .detail-view-content {
+    padding: 3rem 1rem;
+  }
+
+  .close-button {
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .personal-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .personal-detail-section {
+    padding: 1.25rem;
+  }
+
+  .personal-detail-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .personal-content strong {
+    font-size: 1rem;
+  }
+
+  .personal-content p {
+    font-size: 0.95rem;
+  }
+}
+
 .personal-details-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

@@ -18,9 +18,9 @@ const Personal: React.FC<PersonalProps> = ({ onViewMore }) => {
         <div className="personal-item interests">
           <h3>Interests & Hobbies</h3>
           <ul>
-            <li>Photography</li>
-            <li>Hiking & Nature</li>
-            <li>Tech & Innovation</li>
+            <li>Live Music</li>
+            <li>Online gaming</li>
+            <li>Football</li>
           </ul>
         </div>
         <div className="personal-item values">
@@ -28,15 +28,15 @@ const Personal: React.FC<PersonalProps> = ({ onViewMore }) => {
           <ul>
             <li>Continuous Learning</li>
             <li>Work-Life Balance</li>
-            <li>Community Involvement</li>
+            <li>Family Commitment</li>
           </ul>
         </div>
         <div className="personal-item achievements">
           <h3>Personal Achievements</h3>
           <ul>
-            <li>Marathon Finisher</li>
-            <li>Photography Exhibition</li>
-            <li>Volunteer Work</li>
+            <li>Makers Skills Bootcamp</li>
+            <li>Accessibility Programming Awards</li>
+            <li>Various outside of work qualifications</li>
           </ul>
         </div>
       </div>

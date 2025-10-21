@@ -1,6 +1,8 @@
 .personal {
   padding: 2rem;
   margin: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
   background-color: rgba(159, 122, 234, 0.05);
   backdrop-filter: blur(8px);
   border-radius: 16px;
