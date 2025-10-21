@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ onViewMore }) => {
       <div className="header-content">
         <div className="profile-image-container">
           <img 
-            src="/alex-profile.jpg" 
+            src={process.env.PUBLIC_URL + '/alex-profile.jpg'} 
             alt="Alex's professional headshot" 
             className="profile-image"
           />
